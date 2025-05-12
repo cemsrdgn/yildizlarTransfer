@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -38,6 +38,7 @@
 
 .main-nav li {
   margin: 0 15px;
+  position: relative;
 }
 
 .main-nav a {
@@ -47,6 +48,69 @@
   font-size: 0.9rem;
   transition: color 0.3s ease;
   position: relative;
+  border-radius: 28px;
+}
+
+/* Dropdown styles */
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  display: inline-block;  
+  width: 20px;
+  height: 27px;
+  margin-left: 2px;
+  margin-right: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.685);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 0.85rem;
+}
+
+/* Remove underline for dropdown menu links */
+.dropdown-menu a::after {
+  display: none;
 }
 
 .main-nav a::after {
@@ -113,6 +177,7 @@
   overflow: hidden;
   z-index: 1;
   text-decoration: none;
+  border-radius: 28px;
 }
 
 .whatsapp-icon {
@@ -132,13 +197,13 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgb(0, 53, 7), transparent);
   transition: all 0.6s ease;
   z-index: -1;
 }
 
 .whatsapp-button:hover {
-  background-color: #005f00;
+  background-color: rgb(0, 53, 7);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -295,6 +360,37 @@
     font-size: 1.2rem;
     padding: 10px 0;
     display: block;
+  }
+  
+  /* Mobile dropdown */
+  .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    min-width: 100%;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .dropdown-menu.open {
+    max-height: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-menu a {
+    padding: 8px 0;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: transparent;
   }
   
   .contact-info {

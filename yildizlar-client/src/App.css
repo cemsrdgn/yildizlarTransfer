@@ -73,19 +73,14 @@ body {
   padding-bottom: 3rem;
 }
 
-/* Sayfa içerik bölümü stilleri */
+/* Sayfa içerik bölümü stilleri - padding-top kaldırıldı */
 .page-content {
-  padding-top: 100px;
   min-height: calc(100vh - 100px);
 }
 
 @media (max-width: 768px) {
   body {
     font-size: 14px;
-  }
-
-  .page-content {
-    padding-top: 70px;
   }
 }
 

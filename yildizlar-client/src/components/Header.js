@@ -6,7 +6,11 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const whatsappButtonRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const servicesDropdownRef = useRef(null);
   const phoneNumber = "05321234567"; // Telefon numarası
   const whatsappMessage = "Merhaba, nakliye hizmeti hakkında bilgi almak istiyorum."; // WhatsApp mesajı
 
@@ -37,6 +41,23 @@ function Header() {
       document.body.classList.remove('menu-open');
     };
   }, [menuOpen]);
+
+  // Dropdown dışı tıklamayı kontrol et
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
+        setServicesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   // Dikkat çekici animasyon için rastgele zamanlayıcı
   useEffect(() => {
@@ -75,6 +96,22 @@ function Header() {
   // Mobil menüyü tıklama sonrası kapatmak için
   const closeMenu = () => {
     setMenuOpen(false);
+    setDropdownOpen(false);
+    setServicesDropdownOpen(false);
+  };
+
+  // Dropdown menüyü toggle et
+  const toggleDropdown = (e) => {
+    e.preventDefault();
+    setDropdownOpen(!dropdownOpen);
+    setServicesDropdownOpen(false); // Diğer dropdown açıksa kapat
+  };
+
+  // Services dropdown toggle
+  const toggleServicesDropdown = (e) => {
+    e.preventDefault();
+    setServicesDropdownOpen(!servicesDropdownOpen);
+    setDropdownOpen(false); // Diğer dropdown açıksa kapat
   };
 
   // WhatsApp bağlantısını oluştur
@@ -102,8 +139,28 @@ function Header() {
       <nav className={`main-nav ${menuOpen ? 'open' : ''}`}>
         <ul>
           <li><Link to="/" onClick={closeMenu}>ANA SAYFA</Link></li>
-          <li><Link to="/hizmetlerimiz" onClick={closeMenu}>HİZMETLERİMİZ</Link></li>
-          <li><Link to="/kurumsal" onClick={closeMenu}>KURUMSAL</Link></li>
+          <li className="has-dropdown" ref={servicesDropdownRef}>
+            <a href="#" onClick={toggleServicesDropdown} className={servicesDropdownOpen ? 'active' : ''}>
+              HİZMETLERİMİZ
+              <i className={`dropdown-arrow ${servicesDropdownOpen ? 'open' : ''}`}></i>
+            </a>
+            <div className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
+              <Link to="/hizmetlerimiz/ev-ofis-tasimaciligi" onClick={closeMenu}>Yurt İçi Ev ve Ofis Taşımacılığı</Link>
+              <Link to="/hizmetlerimiz/depolama-hizmetleri" onClick={closeMenu}>Yurt İçi Depolama Hizmetleri</Link>
+              <Link to="/hizmetlerimiz/lojistik-destek" onClick={closeMenu}>Lojistik Destek Hizmetleri</Link>
+            </div>
+          </li>
+          <li className="has-dropdown" ref={dropdownRef}>
+            <a href="#" onClick={toggleDropdown} className={dropdownOpen ? 'active' : ''}>
+              KURUMSAL
+              <i className={`dropdown-arrow ${dropdownOpen ? 'open' : ''}`}></i>
+            </a>
+            <div className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
+              <Link to="/kurumsal/biz-kimiz" onClick={closeMenu}>Biz Kimiz?</Link>
+              <Link to="/kurumsal/vizyon-misyon" onClick={closeMenu}>Vizyon ve Misyonumuz</Link>
+              <Link to="/kurumsal/araclarimiz" onClick={closeMenu}>Araçlarımız</Link>
+            </div>
+          </li>
           <li><Link to="/galeri" onClick={closeMenu}>GALERİ</Link></li>
           <li><Link to="/iletisim" onClick={closeMenu}>BİZE ULAŞIN</Link></li>
         </ul>

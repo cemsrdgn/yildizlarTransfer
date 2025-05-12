@@ -1,0 +1,235 @@
+/* Gallery Page Styles */
+.gallery-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.gallery-hero {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  background-image: url('../assets/galeriGorsel.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.gallery-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery-hero .hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.gallery-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.gallery-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Gallery Container */
+.gallery-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 50px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-overlay span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image-caption {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.image-caption p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.image-category {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* CTA Section */
+.cta-container {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+  margin-top: 30px;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .gallery-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .gallery-hero p {
+    font-size: 1rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .whatsapp-button {
+    width: 100%;
+  }
+} 

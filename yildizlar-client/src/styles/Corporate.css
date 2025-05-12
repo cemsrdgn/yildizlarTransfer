@@ -1,0 +1,350 @@
+/* Corporate Pages Shared Styles */
+.corporate-page {
+  width: 100%;
+  min-height: 100vh;
+  color: #333;
+}
+
+.corporate-hero {
+  height: 40vh;
+  min-height: 300px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/corporateGorsel.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.corporate-hero-overlay {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.corporate-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.corporate-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.corporate-content {
+  padding: 2rem 0 4rem;
+}
+
+.section-title {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.title-underline {
+  height: 4px;
+  width: 80px;
+  background-color: #2980b9;
+  margin: 0 auto;
+}
+
+.corporate-text {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.corporate-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #2980b9;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.value-box p {
+  color: #555;
+}
+
+/* Vision Mission Section */
+.vision-mission-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.vision-box, .mission-box {
+  background-color: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.vision-box .section-title,
+.mission-box .section-title {
+  text-align: left;
+}
+
+.vision-box .title-underline,
+.mission-box .title-underline {
+  margin: 0;
+}
+
+/* Goals List */
+.goals-list {
+  margin-top: 3rem;
+}
+
+.goal-item {
+  display: flex;
+  margin-bottom: 2.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+}
+
+.goal-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2980b9;
+  margin-right: 1.5rem;
+  line-height: 1;
+}
+
+.goal-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+/* Vehicles Page Styles */
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.vehicle-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vehicle-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.vehicle-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.vehicle-info {
+  padding: 2rem;
+}
+
+.vehicle-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.vehicle-capacity {
+  font-weight: bold;
+  color: #2980b9;
+  margin-bottom: 1rem;
+}
+
+.vehicle-features {
+  margin-top: 1.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.vehicle-features h4 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.vehicle-features ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* Fleet Advantages */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.advantage-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.advantage-box:hover {
+  transform: translateY(-5px);
+}
+
+.advantage-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #2980b9;
+  margin: 0 auto 1.5rem;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-card {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .vehicle-image {
+    height: auto;
+  }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+  .corporate-hero {
+    height: 50vh;
+  }
+
+  .corporate-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .corporate-hero p {
+    font-size: 1.4rem;
+  }
+
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .vehicle-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  .corporate-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .corporate-hero p {
+    font-size: 1rem;
+  }
+
+  .vehicle-image {
+    height: 180px;
+  }
+
+  .value-box, .advantage-box {
+    padding: 1.5rem;
+  }
+
+  .goal-item {
+    flex-direction: column;
+  }
+
+  .goal-number {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+} 

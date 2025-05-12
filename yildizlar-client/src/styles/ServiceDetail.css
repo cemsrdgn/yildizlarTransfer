@@ -1,0 +1,234 @@
+/* Service Detail Page Styles */
+.service-detail-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.detail-hero {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.detail-hero .hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.detail-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.detail-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content Container */
+.detail-content {
+  flex: 1;
+  padding: 50px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  color: #00489A;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
+.back-button .arrow-left {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 8px solid #00489A;
+  margin-right: 10px;
+}
+
+/* Service Description */
+.service-description {
+  margin-bottom: 40px;
+}
+
+.service-description h2 {
+  font-size: 2rem;
+  color: #00489A;
+  margin-bottom: 20px;
+}
+
+.service-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Service Features */
+.service-features {
+  margin-bottom: 40px;
+}
+
+.service-features h3 {
+  font-size: 1.5rem;
+  color: #00489A;
+  margin-bottom: 20px;
+}
+
+.service-features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.service-features li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.service-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #00489A;
+  font-weight: bold;
+}
+
+/* Service Process */
+.service-process {
+  margin-bottom: 40px;
+}
+
+.service-process h3 {
+  font-size: 1.5rem;
+  color: #00489A;
+  margin-bottom: 20px;
+}
+
+.process-steps {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.process-steps li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.step-number {
+  background-color: #00489A;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-section h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .detail-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .service-description h2 {
+    font-size: 1.8rem;
+  }
+  
+  .service-features h3,
+  .service-process h3,
+  .cta-section h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .detail-hero p {
+    font-size: 1rem;
+  }
+  
+  .service-description p,
+  .service-features li,
+  .step-text {
+    font-size: 1rem;
+  }
+  
+  .whatsapp-button {
+    width: 100%;
+  }
+} 
