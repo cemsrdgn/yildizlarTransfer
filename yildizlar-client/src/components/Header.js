@@ -11,8 +11,8 @@ function Header() {
   const whatsappButtonRef = useRef(null);
   const dropdownRef = useRef(null);
   const servicesDropdownRef = useRef(null);
-  const phoneNumber = "05321234567"; // Telefon numarası
-  const whatsappMessage = "Merhaba, nakliye hizmeti hakkında bilgi almak istiyorum."; // WhatsApp mesajı
+  const phoneNumber = "5397926417"; // Telefon numarası
+  const whatsappMessage = "Merhaba, transfer hizmeti hakkında bilgi almak istiyorum."; // WhatsApp mesajı
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,7 +124,7 @@ function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
       <div className="logo">
         <Link to="/">
-          <h2>YILDIZLAR NAKLIYAT</h2>
+          <h2>YILDIZLAR TRANSFER</h2>
         </Link>
       </div>
       
@@ -169,7 +169,7 @@ function Header() {
       <div className={`contact-info ${menuOpen ? 'open' : ''}`}>
         <a href={`tel:+90${phoneNumber}`} className="phone-number">
           <i className="phone-icon"></i>
-          <span>(0532) 123 45 67</span>
+          <span>(0539) 792 64 17</span>
         </a>
         <a 
           href={getWhatsAppLink()} 

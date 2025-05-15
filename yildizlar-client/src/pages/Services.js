@@ -3,75 +3,266 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Services.css';
 import ContactCard from '../components/ContactCard';
 
+// Import images for Yurt İçi Ev ve Ofis Taşımacılığı
+import evdenEveNakliyatImg from '../assets/yurtIciEvVeOfisTasimaciligi/evdenEveNakliyat.jpg';
+import ekspertizHizmetleriImg from '../assets/yurtIciEvVeOfisTasimaciligi/ekspertizHizmetleri.jpg';
+import buroOfisTasimaciligiImg from '../assets/yurtIciEvVeOfisTasimaciligi/buroOfisTasimaciligi.jpg';
+import kasaTasimaciligiImg from '../assets/yurtIciEvVeOfisTasimaciligi/kasaTasimaciligi.webp';
+import piyanoTasimaciligiImg from '../assets/yurtIciEvVeOfisTasimaciligi/piyanoTasimaciligi.webp';
+import kiymetliEsyalarImg from '../assets/yurtIciEvVeOfisTasimaciligi/kiymetliVeDegerliEsyalarTasimaciligi.jpg';
+import aracTasimaciligiImg from '../assets/yurtIciEvVeOfisTasimaciligi/aracTasimaciligi.jpg';
+import evcilHayvanTransferiImg from '../assets/yurtIciEvVeOfisTasimaciligi/evcilHayvantransferi.jpg';
+import sigortaHizmetleriImg from '../assets/yurtIciEvVeOfisTasimaciligi/sigortaHizmetleri.png';
+import ambalajlamaPaketlemeImg from '../assets/yurtIciEvVeOfisTasimaciligi/ambalajlamaVePaketleme.jpg';
+import yuklemeBosaltmaImg from '../assets/yurtIciEvVeOfisTasimaciligi/yuklemeVeBosaltmaDestek.jpg';
+import operasyonSonrasiImg from '../assets/yurtIciEvVeOfisTasimaciligi/operasyonSonrasıHizmetler.png';
+
+// Import images for Yurt İçi Depolama Hizmetleri
+import depoYonetimiImg from '../assets/yurtIcıDepolamaHizmetleri/depoYonetimi.jpeg';
+import kiralikDepoAlaniImg from '../assets/yurtIcıDepolamaHizmetleri/kiralikDepoAlani.jpg';
+import paketlemeSandiklamaImg from '../assets/yurtIcıDepolamaHizmetleri/paketlemeVeSandiklama.jpg';
+import kurumsalDepolamaImg from '../assets/yurtIcıDepolamaHizmetleri/kurumsalOzelDepolama.jpg';
+import ambalajlamaPaletlemeDepoImg from '../assets/yurtIcıDepolamaHizmetleri/ambalajlamaVePaketlemeVePaletleme.png';
+import envanterYonetimiImg from '../assets/yurtIcıDepolamaHizmetleri/envanterStokYonetimi.jpg';
+import kisiselDepoImg from '../assets/yurtIcıDepolamaHizmetleri/kisiselDepoYonetimi.webp';
+import guvenlikliDepoImg from '../assets/yurtIcıDepolamaHizmetleri/güvenlikliDepoYönetimi.png';
+import etiketlemeBarkodlamaImg from '../assets/yurtIcıDepolamaHizmetleri/etiketlemeVeBarkodlama.jpg';
+
+// Import images for Lojistik Destek Hizmetleri
+import projeTasimaciligiImg from '../assets/lojistikDestekHizmetleri/projeTasimaciligi.jpg';
+import tasimaDagitimImg from '../assets/lojistikDestekHizmetleri/tasimaDestekDagitim.jpg';
+import montajDemontajImg from '../assets/lojistikDestekHizmetleri/montajDemontaj.jpg';
+import ambalajPaketlemeImg from '../assets/lojistikDestekHizmetleri/ambalajVePaketleme.png';
+import konteynerTasimaImg from '../assets/lojistikDestekHizmetleri/konteynerTasimaVePaket.jpg';
+import asansorHizmetleriImg from '../assets/lojistikDestekHizmetleri/asansorHizmetleri.jpg';
+import bakimOnarimImg from '../assets/lojistikDestekHizmetleri/bakımVeOnarim.jpg';
+import teknikBilgiImg from '../assets/lojistikDestekHizmetleri/teknikBilgiVeVeri.jpg';
+import teknikDestekImg from '../assets/lojistikDestekHizmetleri/teknikDestek.jpg';
+import forkliftHizmetleriImg from '../assets/lojistikDestekHizmetleri/forkliftHizmetleri.jpg';
+
 // Fake data for services
 const servicesData = {
   'ev-ofis': [
     {
       id: 1,
-      title: 'Ev Taşıma',
+      title: 'Evden Eve Nakliyat',
       description: 'Profesyonel ekibimizle ev eşyalarınızı güvenle ve hızlı bir şekilde taşıyoruz. Paketleme ve montaj hizmetleri dahildir.',
-      image: 'https://images.unsplash.com/photo-1600518464441-9306a5461596?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/ev-tasima'
+      image: evdenEveNakliyatImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/evden-eve-nakliyat'
     },
     {
       id: 2,
-      title: 'Ofis Taşıma',
-      description: 'İş süreçlerinizi aksatmadan, hafta sonu tercihinize göre ofis mobilyalarınızı ve elektronik cihazlarınızı taşıyoruz.',
-      image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/ofis-tasima'
+      title: 'Ekspertiz Hizmetleri',
+      description: 'Taşınacak eşyalarınızın detaylı envanterini çıkarıyor, değerleme yapıyor ve sigorta kapsamını belirliyoruz.',
+      image: ekspertizHizmetleriImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/ekspertiz-hizmetleri'
     },
     {
       id: 3,
-      title: 'Parça Eşya Taşıma',
-      description: 'Tek bir mobilya veya birkaç parça eşyanızı ekonomik ve hızlı bir şekilde istediğiniz adrese teslim ediyoruz.',
-      image: 'https://images.unsplash.com/photo-1584813470613-611b7c86c6d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/parca-esya-tasima'
+      title: 'Büro, Ofis Taşımacılığı',
+      description: 'İş süreçlerinizi aksatmadan, hafta sonu tercihinize göre ofis mobilyalarınızı ve elektronik cihazlarınızı taşıyoruz.',
+      image: buroOfisTasimaciligiImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/buro-ofis-tasimaciligi'
+    },
+    {
+      id: 4,
+      title: 'Kasa Taşımacılığı',
+      description: 'Özel güvenlik önlemleri ve profesyonel ekipmanlarla kasa ve kasalarınızı güvenle taşıyoruz.',
+      image: kasaTasimaciligiImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/kasa-tasimaciligi'
+    },
+    {
+      id: 5,
+      title: 'Piyano Taşımacılığı',
+      description: 'Piyano ve diğer müzik aletlerinizi özel ekipmanlar ve uzman ekibimizle güvenle taşıyoruz.',
+      image: piyanoTasimaciligiImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/piyano-tasimaciligi'
+    },
+    {
+      id: 6,
+      title: 'Kıymetli ve Değerli Eşyalar Taşımacılığı',
+      description: 'Antika, sanat eseri ve değerli eşyalarınız için özel güvenlik önlemleri ile taşıma hizmeti sunuyoruz.',
+      image: kiymetliEsyalarImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/kiymetli-esyalar'
+    },
+    {
+      id: 7,
+      title: 'Araç Taşımacılığı',
+      description: 'Özel araç taşıma ekipmanlarımızla araçlarınızı güvenle ve hasarsız bir şekilde taşıyoruz.',
+      image: aracTasimaciligiImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/arac-tasimaciligi'
+    },
+    {
+      id: 8,
+      title: 'Evcil Hayvan Transferi',
+      description: 'Evcil hayvanlarınızı özel araçlarımız ve uzman ekibimizle güvenli ve konforlu bir şekilde taşıyoruz.',
+      image: evcilHayvanTransferiImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/evcil-hayvan-transferi'
+    },
+    {
+      id: 9,
+      title: 'Sigorta Hizmetleri',
+      description: 'Eşyalarınızın güvenliği için kapsamlı sigorta seçenekleri sunuyoruz.',
+      image: sigortaHizmetleriImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/sigorta-hizmetleri'
+    },
+    {
+      id: 10,
+      title: 'Ambalajlama ve Paketleme',
+      description: 'Profesyonel paketleme malzemeleri ve uzman ekibimizle eşyalarınızı güvenle paketliyoruz.',
+      image: ambalajlamaPaketlemeImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/ambalajlama-paketleme'
+    },
+    {
+      id: 11,
+      title: 'Yükleme Boşaltma ve Destek',
+      description: 'Eşyalarınızın güvenli yüklenmesi ve boşaltılması için profesyonel destek hizmeti sunuyoruz.',
+      image: yuklemeBosaltmaImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/yukleme-bosaltma'
+    },
+    {
+      id: 12,
+      title: 'Operasyon Sonrası Hizmetler',
+      description: 'Taşıma sonrası montaj, yerleştirme ve temizlik hizmetleri ile tam destek sağlıyoruz.',
+      image: operasyonSonrasiImg,
+      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/operasyon-sonrasi'
     }
   ],
   'depolama': [
     {
       id: 1,
-      title: 'Kısa Süreli Depolama',
-      description: 'Evinizi yenilerken veya taşınma sürecinizde eşyalarınızı güvenli ve iklim kontrollü depolarda saklıyoruz.',
-      image: 'https://images.unsplash.com/photo-1581615160292-8a82d18434a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/depolama-hizmetleri/kisa-sureli'
+      title: 'Depo Yönetimi',
+      description: 'Profesyonel depo yönetimi hizmetimizle eşyalarınız güvenle ve düzenli bir şekilde depolanır. Tüm süreçler uzman ekibimiz tarafından yönetilir.',
+      image: depoYonetimiImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/depo-yonetimi'
     },
     {
       id: 2,
-      title: 'Uzun Süreli Depolama',
-      description: 'Uzun süreli saklama ihtiyaçlarınız için nem ve sıcaklık kontrollü ortamlarda eşyalarınızı güvenle muhafaza ediyoruz.',
-      image: 'https://images.unsplash.com/photo-1600518464441-9306a5461596?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/depolama-hizmetleri/uzun-sureli'
+      title: 'Kiralık Depo Alanı',
+      description: 'İhtiyacınıza uygun boyutlarda, güvenli ve iklim kontrollü kiralık depo alanları sunuyoruz. Kısa ve uzun vadeli kiralama seçenekleri mevcuttur.',
+      image: kiralikDepoAlaniImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/kiralik-depo'
     },
     {
       id: 3,
-      title: 'Özel Eşya Depolama',
-      description: 'Antika, sanat eseri veya değerli koleksiyon parçalarınız için özel güvenlik önlemleri ile depolama hizmeti sunuyoruz.',
-      image: 'https://images.unsplash.com/photo-1517705925264-65f99697f71f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/depolama-hizmetleri/ozel-esya'
+      title: 'Paketleme ve Sandıklama',
+      description: 'Her türlü eşyanız için özel paketleme ve sandıklama hizmetleri sunuyoruz. Hassas eşyalarınız profesyonel ekipmanlarla koruma altına alınır.',
+      image: paketlemeSandiklamaImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/paketleme-sandiklama'
+    },
+    {
+      id: 4,
+      title: 'Kurumsal Özel Depolama',
+      description: 'Şirketinizin ihtiyaçlarına özel, güvenli ve profesyonel kurumsal depolama çözümleri sunuyoruz. Ofis mobilyaları, dosyalar ve ekipmanlar güvende.',
+      image: kurumsalDepolamaImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/kurumsal-depolama'
+    },
+    {
+      id: 5,
+      title: 'Ambalajlama, Paketleme ve Paletleme',
+      description: 'Eşyalarınızın güvenliği için profesyonel ambalajlama, paketleme ve paletleme hizmetleri sunuyoruz. Her türlü ürün için özel çözümler.',
+      image: ambalajlamaPaletlemeDepoImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/ambalajlama-paletleme'
+    },
+    {
+      id: 6,
+      title: 'Envanter Stok Yönetimi',
+      description: 'Dijital envanter takip sistemimizle stok yönetimi hizmeti sunuyoruz. Tüm eşyalarınız kayıt altında ve anlık erişim imkanı.',
+      image: envanterYonetimiImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/envanter-yonetimi'
+    },
+    {
+      id: 7,
+      title: 'Kişisel Depo Yönetimi',
+      description: 'Bireysel ihtiyaçlarınız için özel, güvenli ve uygun fiyatlı kişisel depolama hizmetleri sunuyoruz. Her boyutta depo seçeneği mevcuttur.',
+      image: kisiselDepoImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/kisisel-depo'
+    },
+    {
+      id: 8,
+      title: 'Güvenlikli Depo Yönetimi',
+      description: 'En yüksek güvenlik standartlarına sahip depolama hizmetimizle değerli eşyalarınız 7/24 koruma altında. Gelişmiş alarm sistemleri ve kamera kontrolü.',
+      image: guvenlikliDepoImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/guvenlikli-depo'
+    },
+    {
+      id: 9,
+      title: 'Etiketleme ve Barkodlama',
+      description: 'Modern barkod sistemi ile tüm eşyalarınız etiketlenir ve takip edilir. Aradığınız eşyaya anında ulaşım ve stok takibi kolaylığı.',
+      image: etiketlemeBarkodlamaImg,
+      path: '/hizmetlerimiz/depolama-hizmetleri/etiketleme-barkodlama'
     }
   ],
   'lojistik': [
     {
       id: 1,
-      title: 'Şehirler Arası Nakliye',
-      description: 'Turkiye\'nin her noktasına güvenilir ve hızlı nakliye hizmeti sunuyoruz. Eşyalarınız zamanında ve güvenle teslim edilir.',
-      image: 'https://images.unsplash.com/photo-1620041310639-dfa7d95821c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/lojistik-destek/sehirlerarasi-nakliye'
+      title: 'Proje Taşımacılığı',
+      description: 'Büyük ölçekli projelerde özel ekipman ve uzman ekibimizle nakliye hizmeti sunuyoruz. Hassas ve büyük eşyalar için özel çözümler.',
+      image: projeTasimaciligiImg,
+      path: '/hizmetlerimiz/lojistik-destek/proje-tasimaciligi'
     },
     {
       id: 2,
-      title: 'Kurumsal Lojistik',
-      description: 'Şirketinizin tüm lojistik ihtiyaçlarını karşılıyoruz. Düzenli sevkiyat ve stok yönetimi çözümleri sunuyoruz.',
-      image: 'https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/lojistik-destek/kurumsal-lojistik'
+      title: 'Taşıma, Dağıtım ve Destek',
+      description: 'Yurt içi taşıma, dağıtım ve lojistik destek hizmetleri sunuyoruz. Tam zamanında teslim ve güvenli nakliye garantisi.',
+      image: tasimaDagitimImg,
+      path: '/hizmetlerimiz/lojistik-destek/tasima-dagitim'
     },
     {
       id: 3,
-      title: 'Özel Proje Taşımacılığı',
-      description: 'Ağır yük veya özel taşıma gerektiren projeleriniz için özel çözümler sunuyoruz. Her türlü ekipman desteği ile hizmetinizdeyiz.',
-      image: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-      path: '/hizmetlerimiz/lojistik-destek/ozel-proje'
+      title: 'Montaj ve Demontaj',
+      description: 'Profesyonel ekibimizle her türlü mobilya ve ekipmanın montaj ve demontaj işlemlerini gerçekleştiriyoruz. Teknik uzmanlık gerektiren çözümler.',
+      image: montajDemontajImg,
+      path: '/hizmetlerimiz/lojistik-destek/montaj-demontaj'
+    },
+    {
+      id: 4,
+      title: 'Ambalaj ve Paketleme',
+      description: 'Her türlü eşya için özel ambalajlama ve paketleme hizmetleri sunuyoruz. Profesyonel malzemeler ve teknikler ile güvenli koruma.',
+      image: ambalajPaketlemeImg,
+      path: '/hizmetlerimiz/lojistik-destek/ambalaj-paketleme'
+    },
+    {
+      id: 5,
+      title: 'Konteyner Taşıma ve Paket',
+      description: 'Konteyner taşımacılığı ve paketleme hizmetleri sunuyoruz. Uluslararası standartlarda güvenli ve hızlı konteyner hizmetleri.',
+      image: konteynerTasimaImg,
+      path: '/hizmetlerimiz/lojistik-destek/konteyner-tasima'
+    },
+    {
+      id: 6,
+      title: 'Asansör Hizmetleri',
+      description: 'Yüksek katlı binalarda eşya taşıma için özel yük asansörü hizmetleri sunuyoruz. Güvenli ve hızlı yükseltme çözümleri.',
+      image: asansorHizmetleriImg,
+      path: '/hizmetlerimiz/lojistik-destek/asansor-hizmetleri'
+    },
+    {
+      id: 7,
+      title: 'Bakım ve Onarım',
+      description: 'Depolama ve taşıma ekipmanları için bakım ve onarım hizmetleri sunuyoruz. Düzenli bakım ile ekipman ömrünü uzatın.',
+      image: bakimOnarimImg,
+      path: '/hizmetlerimiz/lojistik-destek/bakim-onarim'
+    },
+    {
+      id: 8,
+      title: 'Teknik Bilgi ve Veri',
+      description: 'Lojistik süreçleriniz için teknik bilgi ve veri analizi hizmetleri sunuyoruz. Optimizasyon ve verimlilik için uzman danışmanlık.',
+      image: teknikBilgiImg,
+      path: '/hizmetlerimiz/lojistik-destek/teknik-bilgi'
+    },
+    {
+      id: 9,
+      title: 'Teknik Destek',
+      description: 'Taşıma ve depolama süreçleriniz için 7/24 teknik destek hizmeti sunuyoruz. Acil durum çözümleri ve sürekli yardım.',
+      image: teknikDestekImg,
+      path: '/hizmetlerimiz/lojistik-destek/teknik-destek'
+    },
+    {
+      id: 10,
+      title: 'Forklift Hizmetleri',
+      description: 'Ağır yüklerin taşınması için profesyonel forklift hizmetleri sunuyoruz. Uzman operatörler ve modern ekipmanlar ile güvenli yükleme ve indirme.',
+      image: forkliftHizmetleriImg,
+      path: '/hizmetlerimiz/lojistik-destek/forklift-hizmetleri'
     }
   ]
 };
