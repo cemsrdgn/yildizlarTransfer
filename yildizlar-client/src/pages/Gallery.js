@@ -59,9 +59,17 @@ import img53 from '../assets/galeri/WhatsApp Image 2025-05-12 at 07.00.25 (8).jp
 import img54 from '../assets/galeri/WhatsApp Image 2025-05-12 at 07.00.25 (9).jpeg';
 import img55 from '../assets/galeri/WhatsApp Image 2025-05-12 at 07.00.25.jpeg';
 
+// Import new images from galeriNew
+import newImg1 from '../assets/galeriNew/WhatsApp Image 2025-05-19 at 02.00.37.jpeg';
+import newImg2 from '../assets/galeriNew/WhatsApp Image 2025-05-19 at 02.00.37 (1).jpeg';
+
 // Import videos
 import video1 from '../assets/galeri/videos/video1.mp4';
 import video2 from '../assets/galeri/videos/video2.mp4';
+
+// Import new videos from galeriNew
+import video3 from '../assets/galeriNew/WhatsApp Video 2025-05-19 at 02.00.14.mp4';
+import video4 from '../assets/galeriNew/WhatsApp Video 2025-05-19 at 02.00.31.mp4';
 
 function Gallery() {
   const [selectedMedia, setSelectedMedia] = useState(null);
@@ -70,23 +78,37 @@ function Gallery() {
   // Videos array
   const galleryVideos = [
     {
+      id: 'v3',
+      src: video3,
+      alt: 'Taşıma Video 3',
+      type: 'video'
+    },
+    {
+      id: 'v4',
+      src: video4,
+      alt: 'Taşıma Video 4',
+      type: 'video'
+    },
+    {
       id: 'v1',
       src: video1,
       alt: 'Taşıma Video 1',
-      type: 'video',
-      poster: img1 // Using first image as poster for video
+      type: 'video'
     },
     {
       id: 'v2',
       src: video2,
       alt: 'Taşıma Video 2',
-      type: 'video',
-      poster: img2 // Using second image as poster for video
+      type: 'video'
     }
   ];
 
   // Images array - all imported images
   const galleryImages = [
+    // Yeni eklenen görseller
+    { id: 56, src: newImg1, alt: 'Galeri Görsel 56', type: 'image' },
+    { id: 57, src: newImg2, alt: 'Galeri Görsel 57', type: 'image' },
+    // Mevcut görseller
     { id: 1, src: img1, alt: 'Galeri Görsel 1', type: 'image' },
     { id: 2, src: img2, alt: 'Galeri Görsel 2', type: 'image' },
     { id: 3, src: img3, alt: 'Galeri Görsel 3', type: 'image' },
@@ -186,7 +208,7 @@ function Gallery() {
                 className="gallery-item video-item"
                 onClick={() => openLightbox(video)}
               >
-                <video src={video.src} poster={video.poster} preload="metadata" />
+                <video src={video.src} preload="metadata" />
                 <div className="video-overlay">
                   <div className="play-icon">▶</div>
                 </div>

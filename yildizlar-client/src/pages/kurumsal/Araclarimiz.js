@@ -79,25 +79,25 @@ function Araclarimiz() {
           
           <div className="advantages-grid">
             <div className="advantage-box">
-              <div className="advantage-icon safety-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Güvenlik</h3>
               <p>Tüm araçlarımızda yolculuğunuz için gerekli güvenlik önlemleri alınmıştır.</p>
             </div>
             
             <div className="advantage-box">
-              <div className="advantage-icon comfort-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Konfor</h3>
               <p>Yolculuğunuzun konforlu geçmesi için araçlarımız özenle hazırlanmıştır.</p>
             </div>
             
             <div className="advantage-box">
-              <div className="advantage-icon maintenance-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Düzenli Bakım</h3>
               <p>Araçlarımız düzenli olarak bakım ve kontrolden geçirilmektedir.</p>
             </div>
             
             <div className="advantage-box">
-              <div className="advantage-icon variety-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Çeşitlilik</h3>
               <p>Farklı ihtiyaçlarınıza uygun araç seçenekleri sunuyoruz.</p>
             </div>

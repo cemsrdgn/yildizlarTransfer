@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import ContactCard from '../components/ContactCard';
+import kurumsalGorsel from '../assets/kurumsalGorsel.jpeg';
 
 function Home() {
   const [currentSlogan, setCurrentSlogan] = useState(0);
@@ -135,9 +136,7 @@ function Home() {
             </div>
           </div>
           <div className="welcome-image">
-            <div className="image-placeholder">
-              <span>Kurumsal Görsel</span>
-            </div>
+            <img src={kurumsalGorsel} alt="Yıldızlar Transfer Kurumsal" className="corporate-image" />
           </div>
         </div>
       </section>
@@ -181,7 +180,7 @@ function Home() {
           <div className="advantages-grid">
             {advantages.map((advantage, index) => (
               <div key={index} className="advantage-item">
-                <div className={`advantage-icon ${advantage.icon}`}></div>
+                
                 <div className="advantage-content">
                   <h3>{advantage.title}</h3>
                   <p>{advantage.description}</p>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Header.css';
+import yildizlarLogo from '../assets/yildizlarTransferLogo.png';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -124,7 +125,10 @@ function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
       <div className="logo">
         <Link to="/">
-          <h2>YILDIZLAR TRANSFER</h2>
+          <div className="logo-container">
+            <img src={yildizlarLogo} alt="Yıldızlar Transfer Logo" className="company-logo" />
+            <h2>YILDIZLAR TRANSFER</h2>
+          </div>
         </Link>
       </div>
       

@@ -86,13 +86,6 @@ const servicesData = {
       path: '/hizmetlerimiz/ev-ofis-tasimaciligi/kiymetli-esyalar'
     },
     {
-      id: 7,
-      title: 'Araç Taşımacılığı',
-      description: 'Özel araç taşıma ekipmanlarımızla araçlarınızı güvenle ve hasarsız bir şekilde taşıyoruz.',
-      image: aracTasimaciligiImg,
-      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/arac-tasimaciligi'
-    },
-    {
       id: 8,
       title: 'Evcil Hayvan Transferi',
       description: 'Evcil hayvanlarınızı özel araçlarımız ve uzman ekibimizle güvenli ve konforlu bir şekilde taşıyoruz.',
@@ -120,13 +113,6 @@ const servicesData = {
       image: yuklemeBosaltmaImg,
       path: '/hizmetlerimiz/ev-ofis-tasimaciligi/yukleme-bosaltma'
     },
-    {
-      id: 12,
-      title: 'Operasyon Sonrası Hizmetler',
-      description: 'Taşıma sonrası montaj, yerleştirme ve temizlik hizmetleri ile tam destek sağlıyoruz.',
-      image: operasyonSonrasiImg,
-      path: '/hizmetlerimiz/ev-ofis-tasimaciligi/operasyon-sonrasi'
-    }
   ],
   'depolama': [
     {
@@ -163,13 +149,6 @@ const servicesData = {
       description: 'Eşyalarınızın güvenliği için profesyonel ambalajlama, paketleme ve paletleme hizmetleri sunuyoruz. Her türlü ürün için özel çözümler.',
       image: ambalajlamaPaletlemeDepoImg,
       path: '/hizmetlerimiz/depolama-hizmetleri/ambalajlama-paletleme'
-    },
-    {
-      id: 6,
-      title: 'Envanter Stok Yönetimi',
-      description: 'Dijital envanter takip sistemimizle stok yönetimi hizmeti sunuyoruz. Tüm eşyalarınız kayıt altında ve anlık erişim imkanı.',
-      image: envanterYonetimiImg,
-      path: '/hizmetlerimiz/depolama-hizmetleri/envanter-yonetimi'
     },
     {
       id: 7,
@@ -223,13 +202,6 @@ const servicesData = {
       path: '/hizmetlerimiz/lojistik-destek/ambalaj-paketleme'
     },
     {
-      id: 5,
-      title: 'Konteyner Taşıma ve Paket',
-      description: 'Konteyner taşımacılığı ve paketleme hizmetleri sunuyoruz. Uluslararası standartlarda güvenli ve hızlı konteyner hizmetleri.',
-      image: konteynerTasimaImg,
-      path: '/hizmetlerimiz/lojistik-destek/konteyner-tasima'
-    },
-    {
       id: 6,
       title: 'Asansör Hizmetleri',
       description: 'Yüksek katlı binalarda eşya taşıma için özel yük asansörü hizmetleri sunuyoruz. Güvenli ve hızlı yükseltme çözümleri.',
@@ -244,26 +216,12 @@ const servicesData = {
       path: '/hizmetlerimiz/lojistik-destek/bakim-onarim'
     },
     {
-      id: 8,
-      title: 'Teknik Bilgi ve Veri',
-      description: 'Lojistik süreçleriniz için teknik bilgi ve veri analizi hizmetleri sunuyoruz. Optimizasyon ve verimlilik için uzman danışmanlık.',
-      image: teknikBilgiImg,
-      path: '/hizmetlerimiz/lojistik-destek/teknik-bilgi'
-    },
-    {
       id: 9,
       title: 'Teknik Destek',
       description: 'Taşıma ve depolama süreçleriniz için 7/24 teknik destek hizmeti sunuyoruz. Acil durum çözümleri ve sürekli yardım.',
       image: teknikDestekImg,
       path: '/hizmetlerimiz/lojistik-destek/teknik-destek'
     },
-    {
-      id: 10,
-      title: 'Forklift Hizmetleri',
-      description: 'Ağır yüklerin taşınması için profesyonel forklift hizmetleri sunuyoruz. Uzman operatörler ve modern ekipmanlar ile güvenli yükleme ve indirme.',
-      image: forkliftHizmetleriImg,
-      path: '/hizmetlerimiz/lojistik-destek/forklift-hizmetleri'
-    }
   ]
 };
 

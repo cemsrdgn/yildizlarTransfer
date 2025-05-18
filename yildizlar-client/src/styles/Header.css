@@ -22,6 +22,17 @@
   text-decoration: none;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  height: 60px;
+  width: auto;
+  margin-right: 10px;
+}
+
 .header .logo h2 {
   color: #fff;
   margin: 0;
@@ -322,16 +333,21 @@
   }
 
   .header .logo {
-    flex: 1;
+    z-index: 1001;
   }
   
+  .company-logo {
+    height: 35px;
+  }
+
   .header.menu-open {
     background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
     height: 100vh;
+    overflow-y: auto;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    overflow-y: auto;
   }
   
   .main-nav {
@@ -422,6 +438,10 @@
 @media (max-width: 480px) {
   .header .logo h2 {
     font-size: 1.1rem;
+  }
+  
+  .company-logo {
+    height: 30px;
   }
   
   .main-nav a {

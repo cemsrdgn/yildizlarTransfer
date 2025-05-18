@@ -55,31 +55,31 @@ function VizyonMisyon() {
             </div>
             
             <div className="value-box">
-              <div className="value-icon honesty-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Dürüstlük</h3>
               <p>Her müşterimize karşı açık ve dürüst bir iletişim politikası izleriz.</p>
             </div>
             
             <div className="value-box">
-              <div className="value-icon professional-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Profesyonellik</h3>
               <p>İşimizi en iyi şekilde yapmak için sürekli kendimizi geliştiririz.</p>
             </div>
             
             <div className="value-box">
-              <div className="value-icon customer-focus-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Müşteri Odaklılık</h3>
               <p>Tüm süreçlerimizde müşteri memnuniyeti en önemli önceliğimizdir.</p>
             </div>
             
             <div className="value-box">
-              <div className="value-icon punctuality-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Zamanında Teslimat</h3>
               <p>Söz verdiğimiz zamanda, işimizi eksiksiz tamamlarız.</p>
             </div>
             
             <div className="value-box">
-              <div className="value-icon improvement-icon"></div>
+              <div className="value-icon trust-icon"></div>
               <h3>Sürekli Gelişim</h3>
               <p>Kendimizi sürekli yenileyerek daha iyi hizmet vermeyi amaçlarız.</p>
             </div>
