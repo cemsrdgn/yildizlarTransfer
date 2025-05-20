@@ -28,6 +28,29 @@ function BizKimiz() {
             <p className="corporate-intro">
               <strong>Yıldızlar Transfer</strong>, Ankara merkezli olarak transfer ve nakliye sektöründe yılların tecrübesiyle hizmet vermektedir. Müşteri memnuniyetini temel ilke edinen firmamız, her geçen gün hizmet kalitesini artırarak sektördeki güvenilir konumunu pekiştirmektedir.
             </p>
+            <div className="social-media-section">
+              <h3>Sosyal Medyada Bizi Takip Edin</h3>
+              <div className="social-media-icons">
+                <a 
+                  href="https://www.instagram.com/yildizlar_transfer?igsh=MXd2dG0zYmtneDRmZw==" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Instagram Sayfamız"
+                >
+                  <i className="social-icon instagram-icon"></i>
+                  <span>Instagram</span>
+                </a>
+                <a 
+                  href="https://www.tiktok.com/@yildizlar_transfer" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="TikTok Sayfamız"
+                >
+                  <i className="social-icon tiktok-icon"></i>
+                  <span>TikTok</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         

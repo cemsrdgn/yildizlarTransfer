@@ -56,6 +56,33 @@ function Contact() {
             <p><a href="tel:+905397926417">(0539) 792 64 17</a></p>
             <p><a href="tel:+905415673950">(0541) 567 39 50</a></p>
           </div>
+          
+          <div className="contact-box">
+            <div className="icon-wrapper">
+              <i className="contact-icon social-media-icon"></i>
+            </div>
+            <h3>Sosyal Medya</h3>
+            <div className="social-icons-container">
+              <a 
+                href="https://www.instagram.com/yildizlar_transfer?igsh=MXd2dG0zYmtneDRmZw==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <i className="contact-social-icon instagram-icon"></i>
+                <span>Instagram</span>
+              </a>
+              <a 
+                href="https://www.tiktok.com/@yildizlar_transfer" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-link"
+              >
+                <i className="contact-social-icon tiktok-icon"></i>
+                <span>TikTok</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="map-section">

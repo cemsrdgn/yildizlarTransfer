@@ -25,6 +25,24 @@ function Footer() {
                 <p><a href="tel:+905397926417">(0539) 792 64 17</a></p>
               </div>
             </div>
+            <div className="social-media-icons">
+              <a 
+                href="https://www.instagram.com/yildizlar_transfer?igsh=MXd2dG0zYmtneDRmZw==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram Sayfamız"
+              >
+                <i className="social-icon instagram-icon"></i>
+              </a>
+              <a 
+                href="https://www.tiktok.com/@yildizlar_transfer" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="TikTok Sayfamız"
+              >
+                <i className="social-icon tiktok-icon"></i>
+              </a>
+            </div>
           </div>
           
           <div className="footer-section links">
