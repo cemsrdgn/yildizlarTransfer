@@ -133,6 +133,26 @@ function Home() {
             <div className="welcome-cta">
               <Link to="/kurumsal/biz-kimiz" className="btn-primary">Bizi Tanıyın</Link>
               <a href={`tel:+90${phoneNumber}`} className="btn-secondary">Hemen Arayın</a>
+              <div className="welcome-social-icons">
+                <a 
+                  href="https://www.instagram.com/yildizlar_transfer?igsh=MXd2dG0zYmtneDRmZw==" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Instagram Sayfamız"
+                  className="welcome-social-link"
+                >
+                  <i className="welcome-social-icon welcome-instagram-icon"></i>
+                </a>
+                <a 
+                  href="https://www.tiktok.com/@yildizlar_transfer" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="TikTok Sayfamız"
+                  className="welcome-social-link"
+                >
+                  <i className="welcome-social-icon welcome-tiktok-icon"></i>
+                </a>
+              </div>
             </div>
           </div>
           <div className="welcome-image">

@@ -646,6 +646,7 @@
 /* Social Media Section */
 .social-media-section {
   margin: 2rem 0;
+  margin-bottom: -50px;
   padding: 1.5rem;
   background-color: #f8f9fa;
   border-radius: 8px;
